@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+ 
+    
+    
+</head>
+<body>
+   
+    <div class="heading">
+    <h1 id="head">loan calculator</h1>
+    </div>
+    <div class="container">
+        <form id="form">        
+            
+            <div class="amount_c">
+            <label for="amount" id="text_amount">Home loan amount</label>
+            <input type="number" id="amount" class="in">
+            <div class="icon_a">
+            <i class="fa-solid fa-indian-rupee-sign" id="i"></i>
+            </div>
+            </div>
+            <div class="slidecontainer">
+                <input type="range" id="loan-amount" min="0" max="20000000" value="50" step="100000">
+                <div class="slider-labels">
+                    <span>0</span>
+                    <span>25L</span>
+                    <span>50L</span>
+                    <span>75L</span>
+                    <span>100L</span>
+                    <span>125L</span>
+                    <span>150L</span>
+                    <span>175L</span>
+                    <span>200L</span>
+                </div>
+            </div>
+            <br>
+            <div class="rate_c">
+            <label for="rate" id="text_rate">Interest rate</label>
+            <input type="number" id="rate" class="in">
+            <div class="icon_b">
+            <i class="fa-solid fa-percent"></i>
+            </div>
+            </div>
+            <div class="slidecontainer">
+                <input type="range" id="int-rate" min="5" max="20" value="3" step="0.1">
+                <div class="slider-labels">
+                    <span>5</span>
+                    <span>7.5</span>
+                    <span>10</span>
+                    <span>12.5</span>
+                    <span>15</span>
+                    <span>17.5</span>
+                    <span>20</span>
+                </div>
+            </div>
+            <br>
+            <div class="number_c">
+            <label for="tenure" id="text_tenure">Loan tenure</label>
+            <input type="number" id="tenure" class="in">       
+                <button id="b1">Yr</button>
+                <button id="b2">Mo</button>      
+            </div>
+            <div class="slidecontainer">
+                <input type="range" id="ten" min="0" max="30" value="0" step="1">
+                <div class="slider-labels">
+                    <span>0</span>
+                    <span>5</span>
+                    <span>10</span>
+                    <span>15</span>
+                    <span>20</span>
+                    <span>25</span>
+                    <span>30</span>
+                </div>
+            </div>
+            <div class="calc_but">
+            <button id="cal">calculate</button>
+            </div>
+        </form>
+    </div>
+    <div class="lower_body">
+    <div class="calc_container">
+        <div class="emi">
+        <h3 id="hemi">Loan EMI</h3>
+        <div class="temi">
+        <i class="fa-solid fa-indian-rupee-sign" id="cal_icon"></i>
+        <p id="cemi">00,000</p>
+        </div>
+        </div>
+        <div class="inter">
+        <h3 id="hinter">Total Interest payable</h3>
+        <div class="interest">
+        <i class="fa-solid fa-indian-rupee-sign" id="cal_icon"></i>
+        <p id="cint">00,000</p>
+        </div>
+        </div>
+        <div class="total">
+        <h3 id="htotal">Total payment</h3>
+        <h3 id="h2total">(principle+interest)</h3>
+        <div class="totalp">
+        <i class="fa-solid fa-indian-rupee-sign" id="cal_icon"></i>
+        <p id="cpay">00,000</p>
+        </div>
+        </div>
+
+    </div>
+    <div class="chart">
+        <h3 id="h_chart">Break-up Of Total Payment(%)</h3>
+        <div class="pie">
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        </div>
+    </div>
+    
+   </div>
+ 
+
+  
+  
+
+    <script src= "js.js" ></script>
+   
+</body>
+</html>
